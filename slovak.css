@@ -26,3 +26,7 @@ nav a {
 table td {
 	column-width: 25%;
 }
+
+.recpic:hover {
+  opacity: 0.4;
+}
