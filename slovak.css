@@ -1,0 +1,28 @@
+/* 
+Slovak colors: 
+Blue - #0B4EA2
+Red - #EE1C25
+
+
+*/
+
+#palatab {
+   /* Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=291614">Link</a> */
+	color: white;
+	font-family: Helvetica;
+}
+
+nav {
+	border: solid 8px #EE1C25;
+	background-color: #0B4EA2;
+	font-family: Helvetica;
+
+}
+
+nav a {
+	color: white;
+}
+
+table td {
+	column-width: 25%;
+}
