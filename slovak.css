@@ -29,4 +29,9 @@ table td {
 
 .recpic:hover {
   opacity: 0.4;
+  color: black;
+}
+
+html {
+	background-color: #0B4EA2;	
 }
