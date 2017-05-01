@@ -2,6 +2,8 @@
 Slovak colors: 
 Blue - #0B4EA2
 Red - #EE1C25
+
+
 */
 
 #palatab {
@@ -14,9 +16,6 @@ nav {
 	border: solid 8px #EE1C25;
 	background-color: #0B4EA2;
 	font-family: Helvetica;
-	float: left;
-	height: 1000px;
-	width: 20%;
 
 }
 
@@ -35,13 +34,4 @@ table td {
 
 html {
 	background-color: #0B4EA2;	
-	color: white;
-	font-family: Arial;
-}
-
-#testtop {
-	background-image: url("pics/lilflag.png");
-	width: 200px;
-	height: 200px;
-	background-repeat: no-repeat;
 }
