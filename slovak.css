@@ -92,6 +92,6 @@ td {
 	src: url(fonts/junction-regular.otf);
 }
 
-h1 {
+h1, h2, h3 {
 	font-family: Junction;
 }
