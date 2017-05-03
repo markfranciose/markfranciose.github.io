@@ -60,6 +60,10 @@ table td {
 	column-width: 25%;
 }
 
+.recpic img {
+	box-shadow: 0 0 8px 8px white inset;
+}
+
 .recpic:hover { /*#6*/
   opacity: 0.4;
   color: black;
@@ -94,4 +98,12 @@ td {
 
 h1, h2, h3 {
 	font-family: Junction;
+}
+
+h2, h3 {
+	text-decoration: underline;
+}
+
+img {
+	border: 1px solid white;
 }
