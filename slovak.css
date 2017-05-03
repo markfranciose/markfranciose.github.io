@@ -1,37 +1,67 @@
-/* 
+/* ls
 Slovak colors: 
 Blue - #0B4EA2
 Red - #EE1C25
 
+Use CSS to add the following to your site.
+
+Padding and border added to at least one element #1
+Margin added to at least one element #2
+At least one centered element (a footer message can be nice for this) #3
+A background image on at least one element #4
+A different font on at least one element #5
+A few elements styled using a class #6
+A different color for visited links #7
+An element styled with an ID #8
+
 
 */
 
-#palatab {
-   /* Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=291614">Link</a> */
-	color: white;
-	font-family: Helvetica;
-}
 
-nav {
+nav { /*#1*/
+	padding: 5px;
 	border: solid 8px #EE1C25;
 	background-color: #0B4EA2;
-	font-family: Helvetica;
+	font-family: Impact; /*#5*/ 
+}
 
+#flag {
+	margin-left: 100px; /*#2*/
+	width: 20%;
+}
+
+#castlepage {
+	background-image: url("pics/bratislava-1768975_1920.jpg"); /*#4*/
+	height: 1000px;
 }
 
 nav a {
 	color: white;
 }
 
+footer { /*3*/
+	margin: auto;
+	width: 300px;
+}
+
 table td {
 	column-width: 25%;
 }
 
-.recpic:hover {
+.recpic:hover { /*#6*/
   opacity: 0.4;
   color: black;
 }
 
 html {
 	background-color: #0B4EA2;	
+	color: white;
+}
+
+a:visited { /*#7*/
+	color: #EE1C25;
+}
+
+#segetab:hover { /*#8*/
+	text-transform: uppercase;
 }
