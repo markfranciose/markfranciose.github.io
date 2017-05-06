@@ -27,6 +27,21 @@ nav { /*#1*/
 	display: inline-block;
 	height: 1000px;
 	vertical-align: top;
+	margin: auto;
+	text-align: center;
+}
+
+nav a {
+	font-size: 1.2em;
+	display: inline-block;
+}
+
+nav img {
+	width: 80%;
+	display: block;
+	margin: auto;
+	margin-top: 60px;
+	padding: 0px;
 }
 
 main {
@@ -45,10 +60,20 @@ main {
 #castlepage {
 	background-image: url("pics/bratislava-1768975_1920.jpg"); /*#4*/
 	height: 1000px;
+	box-shadow: 260px 0 100px 100px white inset;
+	background-repeat: no-repeat;
+	background-color: white;
+	background-attachment: fixed
 }
 
-nav a {
-	color: white;
+
+#castlepage2 {
+	background-image: url("pics/bratislava-1768975_1920.jpg"); /*#4*/
+	height: 1000px;
+	box-shadow: 500px 0 500px 100px #996515 inset;
+	background-repeat: no-repeat;
+	background-color: white;
+	background-attachment: fixed
 }
 
 footer { /*3*/
@@ -75,7 +100,7 @@ html {
 }
 
 a:visited { /*#7*/
-	color: #EE1C25;
+	color: red; /* leave this for now, but come back when the nav links are split off*/
 }
 
 #segetab:hover { /*#8*/
@@ -96,7 +121,21 @@ td {
 	src: url(fonts/junction-regular.otf);
 }
 
-h1, h2, h3 {
+@font-face {
+	font-family: Franchise;
+	src: url(fonts/Franchise-Bold.ttf);
+}
+
+@font-face {
+	font-family: KiloGram;
+	src: url(fonts/KiloGram.otf);
+}
+
+h1 {
+	font-family: Kilogram;
+}
+
+h2, h3 {
 	font-family: Junction;
 }
 
