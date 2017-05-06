@@ -56,6 +56,13 @@ main {
 	width: 20%;
 }
 
+h1 a:visited {
+	color: white;
+}
+
+a:visited {
+	text-decoration-line: none;
+}
 
 #castlepage {
 	background-image: url("pics/bratislava-1768975_1920.jpg"); /*#4*/
@@ -97,6 +104,7 @@ table td {
 html {
 	background-color: #0B4EA2;	
 	color: white;
+	font-family: Helvetica;
 }
 
 a:visited { /*#7*/
