@@ -1,0 +1,94 @@
+{
+  "basics": {
+    "name": "Mark Franciose",
+    "label": "Full Stack Web Developer",
+    "picture": "",
+    "email": "mark.franciose@gmail.com",
+    "phone": "(312) 610-9383",
+    "summary": "A Software Developer with versatile skills from doing, training and leading in different challenging roles. My background showcases loyalty, dedication and hard work. I love to learn and am a very quick study; check out my projects in Rails, Node.js, React",
+    "location": {
+      "address": "2320 West 23rd Place",
+      "postalCode": "IL 60608",
+      "city": "Chicago",
+      "countryCode": "US",
+      "region": "Illinois"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "markfranciose",
+        "url": "https://github.com/markfranciose"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Full Stack Development",
+      "level": "Master",
+      "keywords": [
+        "Ruby on Rails",
+        "HTML/CSS",
+        "Javascript",
+        "Javascript libraries"
+      ]
+    },
+    {
+      "name": "Organizational Leadership",
+      "level": "Master",
+      "keywords": [
+        "Strategic Planning",
+        "Leadership Development",
+        "Project Management"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "UNITE HERE Local One",
+      "position": "Pension Representative",
+      "website": "http://unitehere1.org",
+      "startDate": "Mar 16",
+      "endDate": "May 17",
+      "highlights": [
+        "Participated in 2.1 billion dollar multi-stakeholder pension fund",
+        "Created data and analysis for user by (non-finance) people",
+        "Led team to educate local membership (about ? - or just 'to educate')"
+      ]
+    },
+    {
+      "company": " ",
+      "position": "Contract Bargainer",
+      "startDate": "Apr 12",
+      "endDate": "May 17",
+      "highlights": [
+        "Negotiated complex collective bargaining agreements",
+        "Led teams and campaigns around contract renewals",
+        "Worked with variety of (different groups with conflicting intrests)"
+      ]
+    },
+    {
+      "company": " ",
+      "position": "Organizer",
+      "startDate": "Mar 08",
+      "endDate": "Apr 12",
+      "highlights": [
+        "Trained numerous junior organizers",
+        "Developed and recruited new members"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Purdue University",
+      "area": "Political Science and Government",
+      "startDate": "Sept 2002",
+      "endDate": "Dec 2006"
+    },
+    {
+      "institution": "Dev Bootcamp",
+      "area": "Software Development",
+      "startDate": "May 2017",
+      "endDate": "Aug 2017"
+    }
+  ]
+}
