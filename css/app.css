@@ -2,6 +2,7 @@
 .topbar-responsive {
   background: #2c3840;
   padding: 1rem 1.5rem;
+  border-bottom: 3px solid black;
 }
 
 .topbar-responsive .topbar-responsive-logo {
@@ -128,7 +129,7 @@
 }
 
 .hero-section {
-  background: url("https://static.pexels.com/photos/47735/network-cables-line-network-connector-cable-47735.jpeg") 50% no-repeat;
+  background: url("../img/cables.jpeg") 50% no-repeat;
   background-size: cover;
   height: 100vh;
   text-align: center;
@@ -137,7 +138,7 @@
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: flex-start;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -150,6 +151,11 @@
   padding: 2vh;
   padding-left: 8vh;
   padding-right: 8vh;
+  margin-top: 4vh;
+  min-width: 60vw;
+  min-height: 80vh;
+  border-radius: 2vh;
+  border: 3px solid black;
 }
 
 
