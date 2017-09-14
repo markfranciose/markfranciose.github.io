@@ -3419,7 +3419,7 @@ select {
     -ms-flex-align: center;
         align-items: center; }
     .menu.simple li + li {
-      margin-left: 1rem; }
+      margin-left: 0rem; }
     .menu.simple a {
       padding: 0; }
   @media print, screen and (min-width: 40em) {
