@@ -50,6 +50,10 @@
     list-style-type: none;
     margin: 0;
   }
+
+  #video {
+    width: 90%;
+  }
 }
 
 .topbar-responsive .menu .topbar-responsive-button {
