@@ -17,9 +17,20 @@
   margin-right: 0;
 }
 
+#resume-list li{
+	list-style-type: none;
+	font-size: 18px;
+}
+
+#resume-list li a{
+	font-size: 28px;				
+}
+
 .topbar-responsive .menu a {
   color: #fefefe;
   transition: color 0.15s ease-in;
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 .topbar-responsive .menu a:hover {
@@ -50,6 +61,19 @@
     list-style-type: none;
     margin: 0;
   }
+
+	#resume-list li a{
+		font-size: 18px;
+	}
+
+	.hero-section-text {
+		margin: 0 auto;
+	}
+
+	.menu.simple a {
+	
+	}
+	
 
   #video {
     width: 90%;
