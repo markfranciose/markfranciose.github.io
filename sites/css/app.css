@@ -581,8 +581,8 @@ body {
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  margin-top: 0;
-  background-color: #fefefe;
+  margin-top: 25px;
+  background-color: #2c3840;
 }
 
 #engadget-footer-contact-details-container #engadget-footer-contact-details {
