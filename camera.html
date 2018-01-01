@@ -5,13 +5,193 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="camera.css">
-		<script src="camera.js"></script>
+		<!--<script src="camera.js"></script> -->
+		<script>
+			
+			document.addEventListener('DOMContentLoaded', function() {
+				let pages = [... document.querySelectorAll('.page')];
+				let nextButtons = [... document.querySelectorAll('.next-button')];
+				let backButtons = [... document.querySelectorAll('.back-button')];
+				let allButtons = nextButtons.concat(backButtons);
+
+				const hidePages = () => {
+					pages.forEach((page) => page.style.display = "none")
+				};
+
+				const move = (target) => {
+					hidePages();
+					let position = parseInt(target.id.match(/\d+/g));
+					let isForward = /forward/.test(target.id);
+					if (isForward) { 
+						pages[position].style.display = "block"; }
+					else {
+						pages[position - 2].style.display = "block";}
+				}; 
+				
+				hidePages();
+				pages[0].style.display = 'block';
+				allButtons.forEach((button)=> button.addEventListener('click', ()=> move(event.target)));
+
+			});
+		</script>
 	<head>
 	<body>
-		<div>
-			<!-- -->
+		<div class="page" id="page-1">
+				<h1>LuminDx</h1>
+				<h3>Debugging Dermatology</h3>
+				<button class="next-button" id="page-1-forward">Touch to continue</button>
 		</div>
-		<input type="file" accept="image/*" capture="camera" />
-		<input type="submit">
+		<div class="page" id="page-2">
+			<p>LxuxmxixnxDx analyzes photos taken on your phone and shows you images of conditions similar to what you are experiencing.</p>
+			<p>Your data is:</p>
+			<ul>
+				<li>Secure</li>
+				<li>Private</li>
+			<ul>
+			<button class="back-button" id="page-2-back">Touch to go back</button>
+			<button class='next-button' id="page-2-forward">Touch to continue</button>
+		</div>
+		<div class="page" id="page-3">
+			<table>
+				<tr>
+					<td>Go to a well lit area</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Turn on all available lights</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Avoid shadows</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Remove phone case if it obstructs image</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Wipe camera with a soft, clean cloth</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Tape center of the screen to keep groin area in focus</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Hold your phone one foot away from your groin area</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>As far as possible, use the rear camera</td>
+					<td></td>
+				</tr>
+			</table>
+			<button class="back-button" id="page-3-back">Touch to go back</button>
+			<button class='next-button' id="page-3-forward">Touch to continue</button>
+		</div>
+		<div class="page" id="page-4">
+			<form method="POST">
+				<div>
+					<label for="camera">Click to take a photo</label>
+					<input id="camera" name="camera" type="file" accept="image/*" capture="camera" style="opacity:0" />
+				</div>
+			<input type="submit">
+			</form>
+			<button class="back-button" id="page-4-back">Touch to go back</button>
+			<button class='next-button' id="page-4-forward">Touch to continue</button>
+		</div>
+		<div class="page" id="page-5">
+			<h2>Do you have any of these symptoms?</h2>
+			<table>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Itching</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Burning</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Irregular discharge</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Painful or burning urination</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Pelvic pain</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Lower back pain</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Fever</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Sore throat</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Nausea</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Genital swelling</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="symptom">Strong odor</td>
+			</table>
+			<button class="back-button" id="page-5-back">Touch to go back</button>
+			<button class='next-button' id="page-5-forward">Touch to continue</button>
+		</div>
+		<div class="page" id="page-6">
+			<h2>How long have you had these symptoms?</h2>
+			<table>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="time-frame">Less than a day</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="time-frame">Less than a week</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="time-frame">Less than a month</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="time-frame">Less than a year</td>
+				</tr>
+				<tr>
+					<td class="check-mark"></td>
+					<td class="time-frame">More than a year</td>
+				</tr>
+			</table>
+			<button class="back-button" id="page-6-back">Touch to go back</button>
+			<button class='next-button' id="page-6-forward">Touch to continue</button>
+		</div>
+		<div class="page" id="page-7">
+			<div>
+				<h2>What is your age?</h2>
+
+			</div>
+			<div>
+				<h2>Gender?</h2>
+			</div>
+			<div>
+				<input type="text">
+					We only collect location information to identify new outbreaks for public health research. 
+				<p>
+			</div>
+			<button class="back-button" id="page-7-back">Touch to go back</button>
+			<button class='finish' id="finish">Submit your information</button>
+		</div>
 	<body>
 </html>
