@@ -23,9 +23,11 @@
 			<ul>
 				<li>Secure</li>
 				<li>Private</li>
-			<ul>
+			</ul>
+			<div class="footer">
 			<button class="back-button" id="page-2-back">Touch to go back</button>
 			<button class='next-button' id="page-2-forward">Touch to continue</button>
+			</div>
 		</div>
 		<div class="page" id="page-3">
 			<table>
@@ -62,18 +64,22 @@
 					<td></td>
 				</tr>
 			</table>
+			<div class="footer">
 			<button class="back-button" id="page-3-back">Touch to go back</button>
 			<button class='next-button' id="page-3-forward">Touch to continue</button>
+			</div>
 		</div>
 		<div class="page" id="page-4">
 			<form>
-				<div>
-					<label for="camera">Click to take a photo</label>
+				<div id="cam-label">
+					<label  for="camera">Click HERE to take a photo</label>
 					<input id="camera" name="camera" type="file" accept="image/*" capture="camera" style="opacity:0" />
 				</div>
 			</form>
+			<div class="footer">
 			<button class="back-button" id="page-4-back">Touch to go back</button>
 			<button class='next-button' id="page-4-forward">Touch to continue</button>
+			</div>
 		</div>
 		<div class="page" id="page-5">
 			<h2>Do you have any of these symptoms?</h2>
@@ -125,12 +131,15 @@
 				</tr>
 			</table>
 			</div>
+			<div class="footer">
 			<button class="back-button" id="page-5-back">Touch to go back</button>
 			<button class='next-button' id="page-5-forward">Touch to continue</button>
+			</div>
 		</div>
 		<div class="page" id="page-6">
 			<h2>How long have you had these symptoms?</h2>
-			<table>
+			<div class="center">
+			<table id="time-table">
 				<tr>
 					<td class="check-mark"></td>
 					<td class="time-frame">Less than a day</td>
@@ -152,13 +161,18 @@
 					<td class="time-frame">More than a year</td>
 				</tr>
 			</table>
+			</div>
+			<div class="footer">
 			<button class="back-button" id="page-6-back">Touch to go back</button>
 			<button class='next-button' id="page-6-forward">Touch to continue</button>
+			</div>
 		</div>
 		<div class="page" id="page-7">
 			<div>
 				<h2>What is your age?</h2>
+				<div class="center">
 				<input id="age" type="tel">
+				</div>
 			</div>
 			<div>
 				<h2>Gender?</h2>
@@ -169,12 +183,16 @@
 				</div>
 			</div>
 			<div>
+				<h2>Zip Code?</h2>
+				<div class="center">
 				<input id="zip" type="tel">
-					We only collect location information to identify new outbreaks for public health research.
-				<p>
+				</div>
+				<p>We only collect location information to identify new outbreaks for public health research.</p>
 			</div>
+			<div class="footer">
 			<button class="back-button" id="page-7-back">Touch to go back</button>
 			<button class='finish' id="send">Submit your information</button>
+			</div>
 		</div>
 	<body>
 </html>

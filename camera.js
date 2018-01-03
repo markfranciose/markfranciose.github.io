@@ -21,7 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	let allSymptoms = document.querySelectorAll('.symptom');
 	allSymptoms.forEach((symptom) => {
 		symptom.addEventListener('click', (event)=> {
-			event.target.classList.add('has-symptom')
+			if (event.target.classList.contains('has-symptom')) {
+				event.target.classList.remove('has-symptom')
+			} else {
+				event.target.classList.add('has-symptom')
+			}
 		})
 	})
 
