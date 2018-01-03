@@ -4,4 +4,6 @@ body {
 	background: -webkit-linear-gradient(top, #00b7ea 0%,#009ec3 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, #00b7ea 0%,#009ec3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	height: 100vh;
+	color: #FFFFFF;
+	font-family: sans-serif;
 }

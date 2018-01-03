@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="camera.css">
 		<!--<script src="camera.js"></script> -->
 		<script>
-			
+
 			document.addEventListener('DOMContentLoaded', function() {
 				let pages = [... document.querySelectorAll('.page')];
 				let nextButtons = [... document.querySelectorAll('.next-button')];
@@ -22,15 +22,57 @@
 					hidePages();
 					let position = parseInt(target.id.match(/\d+/g));
 					let isForward = /forward/.test(target.id);
-					if (isForward) { 
+					if (isForward) {
 						pages[position].style.display = "block"; }
 					else {
 						pages[position - 2].style.display = "block";}
-				}; 
-				
+				};
+
+				let allSymptoms = document.querySelectorAll('.symptom');
+				allSymptoms.forEach((symptom) => {
+					symptom.addEventListener('click', (event)=> {
+						event.target.classList.add('has-symptom')
+					})
+				})
+
+
+
+
 				hidePages();
 				pages[0].style.display = 'block';
 				allButtons.forEach((button)=> button.addEventListener('click', ()=> move(event.target)));
+				
+				let genderOptions = document.querySelectorAll('.genders');
+
+				genderOptions.forEach((option) => {
+					option.addEventListener('click', (event)=> {
+						event.target
+					})
+				})
+
+				let sendAll = document.querySelector('#send'); 
+
+
+				sendAll.addEventListener('click', () => {
+					let age = document.querySelector('#age').value;
+					let zipCode = document.querySelector('#zip').value;
+					let symptomLength = 
+					let userSymptoms = [...document.querySelectorAll('.has-symptom')];
+
+					let userSymptomsArray = userSymptoms.map((symptom) => {
+						return symptom.innerHTML;
+					})
+
+					let jsonData = {
+						age: age,
+						gender: "cool",
+						symptoms: userSymptomsArray, 
+						zipCode: zipCode
+					};
+					
+					console.log(jsonData);
+
+				})
 
 			});
 		</script>
@@ -90,12 +132,11 @@
 			<button class='next-button' id="page-3-forward">Touch to continue</button>
 		</div>
 		<div class="page" id="page-4">
-			<form method="POST">
+			<form>
 				<div>
 					<label for="camera">Click to take a photo</label>
 					<input id="camera" name="camera" type="file" accept="image/*" capture="camera" style="opacity:0" />
 				</div>
-			<input type="submit">
 			</form>
 			<button class="back-button" id="page-4-back">Touch to go back</button>
 			<button class='next-button' id="page-4-forward">Touch to continue</button>
@@ -180,18 +221,23 @@
 		<div class="page" id="page-7">
 			<div>
 				<h2>What is your age?</h2>
-
+				<input id="age" type="number">
 			</div>
 			<div>
 				<h2>Gender?</h2>
+				<div id="gender-container">
+					<div class="genders">Female</div>
+					<div class="genders">Male</div>
+					<div class="genders">Other</div>
+				</div>
 			</div>
 			<div>
-				<input type="text">
-					We only collect location information to identify new outbreaks for public health research. 
+				<input id="zip" type="number">
+					We only collect location information to identify new outbreaks for public health research.
 				<p>
 			</div>
 			<button class="back-button" id="page-7-back">Touch to go back</button>
-			<button class='finish' id="finish">Submit your information</button>
+			<button class='finish' id="send">Submit your information</button>
 		</div>
 	<body>
 </html>
