@@ -84,7 +84,8 @@
 					// create Data AJAX call
 					let xhr = new XMLHttpRequest();
 					// Is this URL correct
-					let url = "http://rest.privateye.ai/";
+					let url = "http://techchicago.net";
+					//let url = "http://rest.privateye.ai/";
 					xhr.open("POST", url, true);
 					xhr.setRequestHeader("Content-type", "application/json");
 					xhr.onreadystatechange = function () {
@@ -106,7 +107,7 @@
 					// File AJAX call
 					let xhrFile = new XMLHttpRequest();
 					// Is the URL the same for File upload?
-					xhr.open('POST', 'techchicago.net', true);
+					xhr.open('POST', 'http://techchicago.net', true);
 					xhr.send(fileUpload);
 				})
 
