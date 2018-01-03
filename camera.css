@@ -7,3 +7,61 @@ body {
 	color: #FFFFFF;
 	font-family: sans-serif;
 }
+
+h1 {
+	font-size: 3em;
+	margin-bottom: 0px;
+}
+
+h3 {
+	color: darkblue;
+	margin-top: 0px;
+}
+
+#logo-container {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 40%;
+}
+
+button {
+    background-color: transparent; 
+    border: 1px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#page-1-forward {
+	margin-top: 70%;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+}
+
+#symp-table {
+	width: 80%;
+}
+
+.symptom {
+	border-bottom: 1px solid gray;
+	text-align: center;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+.has-symptom {
+	background-color: rgba(0, 0, 0, 0.2); 
+}
