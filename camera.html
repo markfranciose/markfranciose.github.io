@@ -35,18 +35,25 @@
 					})
 				})
 
-
-
-
 				hidePages();
 				pages[0].style.display = 'block';
 				allButtons.forEach((button)=> button.addEventListener('click', ()=> move(event.target)));
 				
-				let genderOptions = document.querySelectorAll('.genders');
+				let genderOptions = [... document.querySelectorAll('.genders')];
 
 				genderOptions.forEach((option) => {
 					option.addEventListener('click', (event)=> {
-						event.target
+						genderOptions.forEach((o) => o.classList.remove('gender-selected'))
+						event.target.classList.add('gender-selected')
+					})
+				})
+
+				let lengthOptions = [... document.querySelectorAll('.time-frame')]
+
+				lengthOptions.forEach((option) => {
+					option.addEventListener('click', (event) => {
+						lengthOptions.forEach((o) => o.classList.remove('length-selected'))
+						event.target.classList.add('length-selected')
 					})
 				})
 
@@ -55,7 +62,9 @@
 
 				sendAll.addEventListener('click', () => {
 					let age = document.querySelector('#age').value;
+					let gender = document.querySelector('.gender-selected').innerHTML;
 					let zipCode = document.querySelector('#zip').value;
+					let symptomLength = document.querySelector('.length-selected').innerHTML;
 					let userSymptoms = [...document.querySelectorAll('.has-symptom')];
 
 					let userSymptomsArray = userSymptoms.map((symptom) => {
@@ -64,12 +73,25 @@
 
 					let jsonData = {
 						age: age,
-						gender: "cool",
+						gender: gender, 
 						symptoms: userSymptomsArray, 
+						symptomLength: symptomLength,
 						zipCode: zipCode
 					};
 					
-					console.log(jsonData);
+					let xhr = new XMLHttpRequest();
+					let url = "techchicago.net";
+					xhr.open("POST", url, true);
+					xhr.setRequestHeader("Content-type", "application/json");
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState === 4 && xhr.status === 200) {
+							var json = JSON.parse(xhr.responseText);
+							console.log(json.email + ", " + json.password);
+							}
+					};
+
+					let data = JSON.stringify(jsonData);
+					xhr.send(data);
 
 				})
 
